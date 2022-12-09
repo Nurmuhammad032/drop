@@ -1,0 +1,26 @@
+.app__login-inputs {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #958c7e;
+  outline: none;
+  padding: 0.5rem 0.4rem;
+  font-size: 13px;
+}
+
+.app__register-label {
+  color: #848484;
+  margin-bottom: 0.1rem;
+}
+
+.app__register-btn {
+  color: #fff;
+  background-color: #0070e0;
+  background-image: linear-gradient(#168add, #007ee5);
+  border: 1px solid #0c6ebe;
+  width: 100%;
+  padding: 0.3rem 0;
+
+  &:hover {
+    background: linear-gradient(#168eef, #007ee5);
+  }
+}
