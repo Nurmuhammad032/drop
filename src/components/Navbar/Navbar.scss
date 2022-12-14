@@ -1,14 +1,16 @@
 .app__nav-btn {
-  background-color: transparent;
+  background-color: #c56622;
   border: none;
   width: 10rem;
   height: 100%;
-  color: #000;
   letter-spacing: 0.1rem;
   transition: all 0.3s;
   padding: 0.5rem 0;
+  margin: auto 0.5rem;
+  color: white;
+  font-weight: 500;
 
   &:hover {
-    background-color: #f2eee8;
+    background-color: #af5b1e;
   }
 }

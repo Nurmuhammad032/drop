@@ -8,8 +8,8 @@ import { addFolderUser } from "../../manageState/actionCreators/filefoldersActio
 import { HiOutlineFolderAdd } from "react-icons/hi";
 
 const CreateFolder = ({ currentFolder }) => {
-  const [showModal, setShowModal] = useState(false);
-  const [folderName, setFolderName] = useState("");
+  const [showModal, setShowMoHohho] = useState(false);
+  const [folderName, setFayName] = useState("");
 
   const dispatch = useDispatch();
   const { userId, userFolders } = useSelector(
@@ -41,8 +41,8 @@ const CreateFolder = ({ currentFolder }) => {
 
     if (currentFolder === "root folder") {
       dispatch(addFolderUser(folderName, userId, "", []));
-      setFolderName("");
-      setShowModal(false);
+      setFayName("");
+      setShowMoHohho(false);
       return;
     }
 
@@ -54,19 +54,19 @@ const CreateFolder = ({ currentFolder }) => {
           ]
         : [{ id: currentFolder.docId, name: currentFolder.data.name }];
     dispatch(addFolderUser(folderName, userId, currentFolder.docId, path));
-    setFolderName("");
-    setShowModal(false);
+    setFayName("");
+    setShowMoHohho(false);
     return;
   };
   return (
     <>
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal show={showModal} onHide={() => setShowMoHohho(false)}>
         <Modal.Header>
           <Modal.Title>Create Folder</Modal.Title>
           <Button
             variant="white"
             style={{ cursor: "pointer" }}
-            onClick={() => setShowModal(false)}
+            onClick={() => setShowMoHohho(false)}
           >
             <FontAwesomeIcon icon={faTimes} />
           </Button>
@@ -80,30 +80,30 @@ const CreateFolder = ({ currentFolder }) => {
                 style={{
                   outline: "none",
                 }}
-                onChange={(e) => setFolderName(e.target.value)}
+                onChange={(e) => setFayName(e.target.value)}
                 className="w-100 py-1"
                 placeholder="Enter your folder name"
               />
             </Form.Group>
             <Form.Group controlId="formBasicFolderSubmit" className="mt-5">
-            <button
-                  type="submit"
-                  className="d-block mx-auto"
-                  style={{
-                    border: "none",
-                    background: "#0061fe",
-                    color: "#fff",
-                    padding: "0.2rem 1.5rem",
-                  }}
-                >
-                  Add folder
-                </button>
+              <button
+                type="submit"
+                className="d-block mx-auto"
+                style={{
+                  border: "none",
+                  background: "#0061fe",
+                  color: "#fff",
+                  padding: "0.2rem 1.5rem",
+                }}
+              >
+                Add folder
+              </button>
             </Form.Group>
           </Form>
         </Modal.Body>
       </Modal>
       <button
-        onClick={() => setShowModal(true)}
+        onClick={() => setShowMoHohho(true)}
         className="app__dashboard-btns"
       >
         <HiOutlineFolderAdd size={"1.3rem"} className="me-2" />

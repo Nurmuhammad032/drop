@@ -8,8 +8,8 @@ import { addFileUser } from "../../manageState/actionCreators/filefoldersActionC
 import { MdOutlineCreateNewFolder } from "react-icons/md";
 
 const CreateFile = ({ currentFolder }) => {
-  const [showModal, setShowModal] = useState(false);
-  const [file, setFile] = useState("");
+  const [showModal, setShowModalYanaShowmi] = useState(false);
+  const [file, setFileYsniRasm] = useState("");
 
   const dispatch = useDispatch();
   const { userId, userFiles } = useSelector(
@@ -76,8 +76,8 @@ const CreateFile = ({ currentFolder }) => {
           path: [],
         })
       );
-      setFile("");
-      setShowModal(false);
+      setFileYsniRasm("");
+      setShowModalYanaShowmi(false);
       return;
     }
 
@@ -99,20 +99,20 @@ const CreateFile = ({ currentFolder }) => {
         path: path,
       })
     );
-    setFile("");
-    setShowModal(false);
+    setFileYsniRasm("");
+    setShowModalYanaShowmi(false);
     return;
   };
 
   return (
     <>
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal show={showModal} onHide={() => setShowModalYanaShowmi(false)}>
         <Modal.Header>
           <Modal.Title>Create File</Modal.Title>
           <Button
             variant="white"
             style={{ cursor: "pointer" }}
-            onClick={() => setShowModal(false)}
+            onClick={() => setShowModalYanaShowmi(false)}
           >
             <FontAwesomeIcon icon={faTimes} />
           </Button>
@@ -124,7 +124,7 @@ const CreateFile = ({ currentFolder }) => {
                 type="text"
                 placeholder="eg. index.html, index.js, index.php, index.txt"
                 value={file}
-                onChange={(e) => setFile(e.target.value)}
+                onChange={(e) => setFileYsniRasm(e.target.value)}
               /> */}
               <input
                 type="text"
@@ -132,7 +132,7 @@ const CreateFile = ({ currentFolder }) => {
                 style={{
                   outline: "none",
                 }}
-                onChange={(e) => setFile(e.target.value)}
+                onChange={(e) => setFileYsniRasm(e.target.value)}
                 className="w-100 py-1"
                 placeholder="eg. index.html, index.js, index.php, index.txt"
               />
@@ -156,7 +156,7 @@ const CreateFile = ({ currentFolder }) => {
       </Modal>
       <button
         className="app__dashboard-btns"
-        onClick={() => setShowModal(true)}
+        onClick={() => setShowModalYanaShowmi(true)}
       >
         <MdOutlineCreateNewFolder className="me-2" size={"1.4rem"} />
         Create File

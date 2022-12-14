@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
-import { auth, database } from "../../app/firebase";
-import userModel from "../../models/users";
+import { auth, database } from "../../services/firebase";
+import userModel from "../../functions/users";
 import { RESET_USER, SET_USER } from "../actions/authActions";
 import { RESET_FOLDERS_FILES } from "../actions/filefoldersActions";
 

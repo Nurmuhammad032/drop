@@ -44,17 +44,8 @@ const Login = () => {
       >
         <div>
           <Row className="align-items-center">
-            <Col md="5">
-              <img
-                src="/login.png"
-                alt="phhp"
-                style={{
-                  width: "20rem",
-                }}
-              />
-            </Col>
-            <Col md="6" className="ms-5">
-              <h1 className="display-5 text-secondary my-4 text-center">
+            <Col md="12" className="ms-5">
+              <h1 className="display-6 my-4 text-center">
                 Login
               </h1>
               <Form onSubmit={handleSubmit}>

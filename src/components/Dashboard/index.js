@@ -24,8 +24,18 @@ const Dashboard = () => {
       history.push("/login");
     }
   }, [isLoggedIn]);
+
   return (
-    <Container fluid className="px-0" style={{ overflowX: "hidden" }}>
+    <Container
+      fluid
+      className="px-0"
+      style={{
+        overflowX: "hidden",
+        background:
+          "url('https://wusys.yellowmind.agency/img/svg/bg-main.svg') center center/cover no-repeat",
+        minHeight: "100vh",
+      }}
+    >
       <NavDashboard />
       <Switch>
         <Route exact path={path} component={Home} />

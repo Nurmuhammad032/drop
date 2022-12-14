@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
-import { database } from "../../app/firebase";
-import docModel from "../../models/docs";
-import fileModel from "../../models/files";
+import { database } from "../../services/firebase";
+import docModel from "../../functions/docs";
+import fileModel from "../../functions/files";
 import {
   SET_LOADING,
   SET_ADMIN_FILES,

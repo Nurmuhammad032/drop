@@ -4,15 +4,15 @@ import { Button, Form, Modal, ProgressBar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { toast } from "react-toastify";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
-import { storage } from "../../app/firebase";
+import { storage } from "../../services/firebase";
 import { addFileUser } from "../../manageState/actionCreators/filefoldersActionCreators";
 import { GrUpload } from "react-icons/gr";
 
 const UploadFile = ({ currentFolder }) => {
   const [showModal, setShowModal] = useState(false);
   const [file, setFile] = useState(null);
-  const [fileName, setFileName] = useState("");
-  const [progress, setProgress] = useState(0);
+  const [fileName, setFileNameRasmi] = useState("");
+  const [progress, setProgressStart] = useState(0);
 
   const dispatch = useDispatch();
   const { userId, userFiles } = useSelector(
@@ -81,7 +81,7 @@ const UploadFile = ({ currentFolder }) => {
       (snapshot) => {
         const newProgress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        setProgress(Math.floor(newProgress));
+        setProgressStart(Math.floor(newProgress));
       },
       (error) => {
         return toast.error(error.message);
@@ -100,7 +100,7 @@ const UploadFile = ({ currentFolder }) => {
             })
           );
           setFile("");
-          setProgress(0);
+          setProgressStart(0);
           setShowModal(false);
           return;
         }
@@ -124,7 +124,7 @@ const UploadFile = ({ currentFolder }) => {
           })
         );
         setFile("");
-        setProgress(0);
+        setProgressStart(0);
         setShowModal(false);
         return;
       }
@@ -163,7 +163,7 @@ const UploadFile = ({ currentFolder }) => {
                   type="file"
                   className="file border-1 d-flex align-items-center justify-content-between rounded-2"
                   onChange={(e) => {
-                    setFileName(e.target.value);
+                    setFileNameRasmi(e.target.value);
                     setFile(e.target.files[0]);
                   }}
                   custom="true"
@@ -191,7 +191,7 @@ const UploadFile = ({ currentFolder }) => {
         onClick={() => setShowModal(true)}
         className="app__dashboard-btns"
       >
-        <GrUpload className="me-2" />
+        <GrUpload className="me-2 text-white" />
         Upload File
       </button>
     </>

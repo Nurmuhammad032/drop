@@ -1,4 +1,4 @@
-import { database } from "../app/firebase";
+import { database } from "../services/firebase";
 
 const userModel = (email, name, uid) => {
   const model = {

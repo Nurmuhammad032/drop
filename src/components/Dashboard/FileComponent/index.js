@@ -43,7 +43,7 @@ const FileComponent = () => {
     }),
     shallowEqual
   );
-  const [prevData, setPrevData] = useState("");
+  const [prevData, setPrevDataOldinugisi] = useState("");
   const [data, setData] = useState("");
 
   const codes = {
@@ -90,7 +90,7 @@ const FileComponent = () => {
         !currentFile.data.name.includes(".rar"))
     ) {
       setData(currentFile.data.data);
-      setPrevData(currentFile.data.data);
+      setPrevDataOldinugisi(currentFile.data.data);
     }
   }, [dispatch, isLoading, currentFile && currentFile.data.data]);
 
@@ -130,7 +130,7 @@ const FileComponent = () => {
               data={data}
               prevData={prevData}
               userId={userId}
-              setPrevData={setPrevData}
+              setPrevDataOldinugisi={setPrevDataOldinugisi}
               setData={setData}
             />
             <Row

@@ -7,11 +7,12 @@ import { registerUser } from "../../../manageState/actionCreators/authActionCrea
 import "../Register.scss";
 
 const Register = () => {
-  const [nameValue, setNameValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
-  const [password, setPasswordValue] = useState("");
-  const [confirmPasswordUpdate, setConfirmPasswordUpdate] = useState("");
-  const [isError, setIsError] = useState("");
+  const [nameValue, setNameValueYanavalue] = useState("");
+  const [emailValue, setEmailValueEmailniki] = useState("");
+  const [password, setPasswordValueUpdate] = useState("");
+  const [confirmPasswordUpdate, setConfirmPasswordUpdateBoshlash] =
+    useState("");
+  const [isError, setIsErrorErrr] = useState("");
 
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ const Register = () => {
       password,
     };
 
-    dispatch(registerUser(data, setIsError));
+    dispatch(registerUser(data, setIsErrorErrr));
   };
 
   useEffect(() => {
@@ -59,20 +60,8 @@ const Register = () => {
       >
         <div>
           <Row className="h-320 p-4 align-items-center">
-            <Col md="5">
-              <img
-                src="/login.png"
-                alt="phhp"
-                style={{
-                  width: "20rem",
-                }}
-              />
-            </Col>
-            <Col md="6" className="ms-5">
-              <h1
-                style={{ fontWeight: "400" }}
-                className="text-secondary my-4 text-center"
-              >
+            <Col md="12" className="ms-5">
+              <h1 style={{ fontWeight: "400" }} className="my-4 text-center">
                 Create an account
               </h1>
               <Form onSubmit={handleSubmit}>
@@ -84,7 +73,7 @@ const Register = () => {
                     id="name"
                     type="text"
                     value={nameValue}
-                    onChange={(e) => setNameValue(e.target.value)}
+                    onChange={(e) => setNameValueYanavalue(e.target.value)}
                     className="app__login-inputs"
                   />
                 </Form.Group>
@@ -95,7 +84,7 @@ const Register = () => {
                   <input
                     type="email"
                     value={emailValue}
-                    onChange={(e) => setEmailValue(e.target.value)}
+                    onChange={(e) => setEmailValueEmailniki(e.target.value)}
                     className={"app__login-inputs"}
                   />
                 </Form.Group>
@@ -106,7 +95,7 @@ const Register = () => {
                   <input
                     type="password"
                     value={password}
-                    onChange={(e) => setPasswordValue(e.target.value)}
+                    onChange={(e) => setPasswordValueUpdate(e.target.value)}
                     className={"app__login-inputs"}
                   />{" "}
                 </Form.Group>
@@ -120,7 +109,9 @@ const Register = () => {
                   <input
                     type="password"
                     value={confirmPasswordUpdate}
-                    onChange={(e) => setConfirmPasswordUpdate(e.target.value)}
+                    onChange={(e) =>
+                      setConfirmPasswordUpdateBoshlash(e.target.value)
+                    }
                     className={"app__login-inputs"}
                   />
                 </Form.Group>

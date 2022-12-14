@@ -14,13 +14,11 @@
 
 .app__register-btn {
   color: #fff;
-  background-color: #0070e0;
-  background-image: linear-gradient(#168add, #007ee5);
-  border: 1px solid #0c6ebe;
+  background-color: #c56622;
   width: 100%;
   padding: 0.3rem 0;
-
+  border: none;
   &:hover {
-    background: linear-gradient(#168eef, #007ee5);
+    background: #af5b1e;
   }
 }

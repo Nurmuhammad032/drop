@@ -8,8 +8,8 @@ import { addFileUser } from "../../manageState/actionCreators/filefoldersActionC
 import { MdOutlineCreateNewFolder } from "react-icons/md";
 
 const CreateFile = ({ currentFolder }) => {
-  const [isShowModal, setIsShowModal] = useState(false);
-  const [file, setAllFiles] = useState("");
+  const [isShowModal, setIsShowModalOpenDoim] = useState(false);
+  const [file, setAllFilesHammasi] = useState("");
 
   const dispatch = useDispatch();
   const { userId, userFiles } = useSelector(
@@ -76,8 +76,8 @@ const CreateFile = ({ currentFolder }) => {
           path: [],
         })
       );
-      setAllFiles("");
-      setIsShowModal(false);
+      setAllFilesHammasi("");
+      setIsShowModalOpenDoim(false);
       return;
     }
 
@@ -99,20 +99,20 @@ const CreateFile = ({ currentFolder }) => {
         path: path,
       })
     );
-    setAllFiles("");
-    setIsShowModal(false);
+    setAllFilesHammasi("");
+    setIsShowModalOpenDoim(false);
     return;
   };
 
   return (
     <>
-      <Modal show={isShowModal} onHide={() => setIsShowModal(false)}>
+      <Modal show={isShowModal} onHide={() => setIsShowModalOpenDoim(false)}>
         <Modal.Header>
           <Modal.Title>Create File</Modal.Title>
           <Button
             variant="white"
             style={{ cursor: "pointer" }}
-            onClick={() => setIsShowModal(false)}
+            onClick={() => setIsShowModalOpenDoim(false)}
           >
             <FontAwesomeIcon icon={faTimes} />
           </Button>
@@ -124,7 +124,7 @@ const CreateFile = ({ currentFolder }) => {
                 type="text"
                 placeholder="eg. index.html, index.js, index.php, index.txt"
                 value={file}
-                onChange={(e) => setAllFiles(e.target.value)}
+                onChange={(e) => setAllFilesHammasi(e.target.value)}
               /> */}
               <input
                 type="text"
@@ -132,7 +132,7 @@ const CreateFile = ({ currentFolder }) => {
                 style={{
                   outline: "none",
                 }}
-                onChange={(e) => setAllFiles(e.target.value)}
+                onChange={(e) => setAllFilesHammasi(e.target.value)}
                 className="w-100 py-1"
                 placeholder="eg. index.html, index.js, index.php, index.txt"
               />
@@ -156,7 +156,7 @@ const CreateFile = ({ currentFolder }) => {
       </Modal>
       <button
         className="app__dashboard-btns"
-        onClick={() => setIsShowModal(true)}
+        onClick={() => setIsShowModalOpenDoim(true)}
       >
         <MdOutlineCreateNewFolder className="me-2" size={"1.4rem"} />
         Create File

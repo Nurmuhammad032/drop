@@ -4,13 +4,12 @@ import "firebase/firestore";
 import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAoxOsiuQXzZgPb6Zz7CSANo5Ds-GTFZn8",
-  authDomain: "dropbox-8787a.firebaseapp.com",
-  databaseURL: "https://dropbox-8787a-default-rtdb.firebaseio.com",
-  projectId: "dropbox-8787a",
-  storageBucket: "dropbox-8787a.appspot.com",
-  messagingSenderId: "252052981019",
-  appId: "1:252052981019:web:39fe7bd51b50c9e8303fbe",
+  apiKey: "AIzaSyC7W8Oo8MW-tESDvCceNK6jPpi5-mO9e10",
+  authDomain: "filebox-9a14b.firebaseapp.com",
+  projectId: "filebox-9a14b",
+  storageBucket: "filebox-9a14b.appspot.com",
+  messagingSenderId: "414619200118",
+  appId: "1:414619200118:web:92f6fb3861fea483350d57"
 };
 
 firebase.initializeApp(firebaseConfig);

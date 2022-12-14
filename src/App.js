@@ -35,7 +35,8 @@ const App = () => {
           <NavbarComponent />
           <div
             style={{
-              background: "#1E1919",
+              background:
+                "url('https://wusys.yellowmind.agency/img/svg/bg-main.svg') center center/cover no-repeat",
               minHeight: "100vh",
             }}
           >
@@ -48,77 +49,44 @@ const App = () => {
             >
               <h1
                 style={{
-                  color: "#F7F5F2",
+                  color: "#212121",
                   padding: "3rem 0 1rem",
                   fontWeight: 400,
                 }}
               >
-                Join over 700 million registered users who trust Dropbox
+                My Dropbox
               </h1>
               <p
                 style={{
-                  color: "#F7F5F2",
+                  color: "#212121",
                 }}
               >
-                Easy to use, reliable, private and secure. It’s no wonder
-                Dropbox is the choice for storing and sharing your most
-                important files.
+                Dropbox brings everything - traditional files, cloud content and
+                web shortcuts - together in one place.
               </p>
             </div>
 
-            <img
-              src="https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/v2-hp-asset-medium-2560x1840-en_GB.jpg.transform/2560w/80q/img.jpg"
-              alt="ph"
+            <div
               style={{
-                width: "40rem",
-                display: "block",
-                margin: "4rem auto",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-evenly",
+                marginTop: "4rem",
               }}
-            />
-            <Container>
-              <Row>
-                <Col md="3" className="p-4">
-                  <div className="text-white ">
-                    <img src={emoji} alt="hp" />
-                    <h5 className="mt-4 mb-3">Your files, not ours</h5>
-                    <p>
-                      With Dropbox, your files belong to you, not us, so you can
-                      be sure we’re not reselling your data.
-                    </p>
-                  </div>
-                </Col>
-                <Col md="3" className="p-4">
-                  <div className="text-white ">
-                    <img src={cloud} alt="hp" />
-                    <h5 className="mt-4 mb-3">All your files in one place</h5>
-                    <p>
-                      Store computer backups, photo libraries, thousands of
-                      documents – all your files, in the same place.
-                    </p>
-                  </div>
-                </Col>
-                <Col md="3" className="p-4">
-                  <div className="text-white ">
-                    <img src={twinkle} alt="hp" />
-                    <h5 className="mt-4 mb-3">One-of-a-kind functionality</h5>
-                    <p>
-                      Store files as large as 2 TB each, sync at light speed and
-                      allow anyone to preview nearly 200 file types.
-                    </p>
-                  </div>
-                </Col>
-                <Col md="3" className="p-4">
-                  <div className="text-white ">
-                    <img src={shield} alt="hp" />
-                    <h5 className="mt-4 mb-3">Ease of use and security</h5>
-                    <p>
-                      2/3 of surveyed users say that Dropbox keeps their files
-                      more secure and we’re a leader in ease of use.
-                    </p>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
+            >
+              <img
+                src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/basic/basic_hero_ui_en_GB@2x.png?id=8a9978db-8b4e-4136-b20b-bfe317363ff2&output_type=png"
+                alt="ph"
+                style={{
+                  width: "40rem",
+                  display: "block",
+                }}
+              />
+              <h1>
+                Trusted by over 700 million <br /> registered users and 600,000
+                teams
+              </h1>
+            </div>
           </div>
         </Route>
         <Route exact path="/login" component={() => <Login />}></Route>
